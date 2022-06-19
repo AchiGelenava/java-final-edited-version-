@@ -1,0 +1,38 @@
+create table platform_users
+(id int constraint pu_id_pk primary key,
+ name varchar2(20),
+ last_name varchar2(20),
+ game varchar2(20),
+ appid int,
+ number_of_players int);
+
+
+create sequence id_sequence 
+start with 1
+increment by 1;
+
+create table admins
+(id int constraint admins_id_pk primary key);
+
+insert into platform_users
+values(1, 'admin', 'admin', 'hollow knight', 0,0);
+ 
+insert into admins
+values(1)
+
+
+აქვე ჩაგიგდებ რამდენიმე appid ს რომელიც api სთვის არის საჭირო, სამწუხაროდ თურმე არ არსებობს ისეთი ეიპიაი რომელიც სახელით წამოიღებს მოთამაშეების რაოდენობას
+(მარტო კოდია ჩასაწერი appid_ში, სახელები არა) 
+hollow knight - 367520
+metal gear solid revengeance - 235460
+gta V - 271590
+sekiro - 814380
+celeste - 504230
+elden ring - 1245620
+dark souls III - 374320
+ori and the will of wisps - 261570
+the witcher III: wild hunt - 292030
+metro exodus - 412020
+ალბათ საკმარისია ესენი მაგრამ https://steamdb.info/ ამ საიტიდან არის შესაძლებელი სტიმზე არსებული ნებისმიერი თამაშის აიდის დასერჩვა.
+
+
